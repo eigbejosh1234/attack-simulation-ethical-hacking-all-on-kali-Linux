@@ -12,7 +12,6 @@ On your kali vm, run the command below to scan for open port, service, and versi
 
 nmap -sV -p- -A 192.168.*.*
 
-<img width="960" height="127" alt="image" src="https://github.com/user-attachments/assets/6c529fd2-0621-435e-91a9-357796b876f1" />
 
 
 **(3) Run the command below to install mestasploit console**
