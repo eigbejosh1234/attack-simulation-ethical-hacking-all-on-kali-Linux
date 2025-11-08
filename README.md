@@ -13,11 +13,13 @@ On your kali vm, run the command below to scan for open port, service, and versi
 nmap -sV -p- -A 192.168.*.*
 
 https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/blob/0c842b0c2bdc5102831a7bf12bc7717a3b837b8c/Screenshot1.png
+
+
 **(3) Run the command below to install mestasploit console**
 
 sudo apt install --reinstall metasploit-framework -y
 
-After installing metasploit, run the command below to lounch metasploit:
+After installing metasploit, run the command below to lunch metasploit:
 
 msfconsole
 
@@ -31,8 +33,7 @@ The above command will import the target scanned result to metasploit database. 
 
 sudo systemctl start postgresql
 
-<img width="960" height="47" alt="image" src="https://github.com/user-attachments/assets/2a25a234-affd-4908-94aa-6dce128f521e" />
-
+Screenshot2.png
 
 To initialize/create or check if its has been configured, run:
 
