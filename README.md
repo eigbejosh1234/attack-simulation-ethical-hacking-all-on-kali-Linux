@@ -12,7 +12,7 @@ On your kali vm, run the command below to scan for open port, service, and versi
 
 nmap -sV -p- -A 192.168.*.*
 
-
+https://github.com/eigbejosh1234/attack-simulation-ethical-hacking-all-on-kali-Linux/edit/main/Screenshot1.png
 
 **(3) Run the command below to install mestasploit console**
 
